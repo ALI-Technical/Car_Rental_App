@@ -5,8 +5,9 @@ const userModel = require("../models/user");
 ///route post... /api/register
 module.exports.register = async (req, res) => {
     const errors = validationResult(req)
+    console.log("hitttttttttttttttt");
 
-    // console.log(errors);
+    console.log(errors);
 
     if (errors.isEmpty()) {
         const { name, email, password } = req.body;
@@ -88,7 +89,7 @@ module.exports.allUsers = async (req, res) => {
 //// get user////
 
 module.exports.user = async (req, res) => {
-    const { id } = req.params.id;
+    const { id } = req.params;
     console.log(id)
     try {
         const user = await userModel.findById( id);

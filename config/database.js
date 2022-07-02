@@ -3,7 +3,7 @@ const env = require("./envConfig")
 
 const connect = async() =>{
     try {
-     await  mongoose.connect(env.MONGO_URL || `mongodb+srv://ALI:ali.devs123@cluster0.bhhln.mongodb.net/test`);
+     await  mongoose.connect(env.MONGO_URL || `mongodb+srv://ALI:ali.devs123@cluster0.bhhln.mongodb.net/carRental`);
      console.log("Database connected");
     } catch (error) {
        console.log(error.message) ;
